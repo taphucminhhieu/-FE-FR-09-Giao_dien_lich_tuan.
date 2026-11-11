@@ -1,3 +1,4 @@
+
 let bookings = [
     {
         id: "BK001",
@@ -534,3 +535,4 @@ document.addEventListener("keydown", function (event) {
 
 renderCalendar();
 updateStatistics();
+

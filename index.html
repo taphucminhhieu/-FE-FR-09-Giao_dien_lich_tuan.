@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VRP-GO - Lịch xe theo tuần</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="/trang chu mo dau goc/" class="logo">VRP - <span>Go</span></a>
+
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <ul class="nav-list">
+                        <li><a href="/trang chu mo dau goc/">Trang chủ</a></li>
+                        <li><a href="/trang chu mo dau goc/#vehicles">Thuê xe</a></li>
+                        <li><a href="/trang chu mo dau goc/#how-it-works">Cách hoạt động</a></li>
+                        <li><a href="/trang chu mo dau goc/#about">Về chúng tôi</a></li>
+                        <li><a href="/Giao diện xem lịch tuần khung giờ (HTML - CSS) (khách hàng)/" class="active">Lịch
+                                thuê</a></li>
+                    </ul>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#" class="btn btn-login">Đăng nhập</a>
+                <a href="#" class="btn btn-register">Đăng ký</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <main class="main-container">
+
+        <!-- HEADER TIÊU ĐỀ -->
+        <div class="page-header">
+            <span class="badge">Quản lý lịch chuyến đi</span>
+            <h1 class="page-title">Lịch đặt xe theo tuần & Đơn giữ chỗ</h1>
+            <p class="page-description">
+                Theo dõi chính xác trạng thái xe trống, khung giờ khách đã thuê hoặc đang được <strong>giữ chỗ tạm thời
+                    (30 phút)</strong> để tránh trùng lịch đặt.
+            </p>
+        </div>
+
+        <!-- THANH BỘ LỌC & CHÚ THÍCH -->
+        <div class="filter-bar">
+            <div class="filter-controls">
+                <button class="btn-filter">
+                    < Tuần trước</button>
+                        <span class="current-week">Tuần 41: 09/10/2026 – 15/10/2026</span>
+                        <button class="btn-filter">Tuần sau ></button>
+                        <button class="btn-today">Hôm nay</button>
+            </div>
+
+            <!-- LEGEND / CHÚ THÍCH PHÂN BIỆT TRẠNG THÁI -->
+            <div class="legend-list">
+                <div class="legend-item">
+                    <span class="dot dot-confirmed"></span>
+                    <span>Đã xác nhận / Đang thuê</span>
+                </div>
+                <div class="legend-item">
+                    <span class="dot dot-holding"></span>
+                    <span>Đang giữ chỗ (Khóa 30p)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="dot dot-pending"></span>
+                    <span>Chờ duyệt</span>
+                </div>
+                <div class="legend-item">
+                    <span class="dot dot-empty"></span>
+                    <span>Trống</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- BẢNG LỊCH XE THEO TUẦN -->
+        <div class="table-card">
+            <div class="table-wrapper">
+                <table class="schedule-table">
+
+                    <!-- HÀNG TIÊU ĐỀ THỜI GIAN -->
+                    <thead>
+                        <tr>
+                            <th class="th-bike">Tên xe & Biển số</th>
+                            <th class="th-day">Thứ 2<br /><span>09/10</span></th>
+                            <th class="th-day">Thứ 3<br /><span>10/10</span></th>
+                            <th class="th-day th-today">Thứ 4 (Hôm nay)<br /><span>11/10</span></th>
+                            <th class="th-day">Thứ 5<br /><span>12/10</span></th>
+                            <th class="th-day">Thứ 6<br /><span>13/10</span></th>
+                            <th class="th-day">Thứ 7<br /><span>14/10</span></th>
+                            <th class="th-day th-sunday">Chủ Nhật<br /><span>15/10</span></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <!-- DÒNG XE 1: HONDA VISION 2024 -->
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">Honda Vision 2024</div>
+                                <div class="bike-meta">72-C1 888.99 · Xe tay ga</div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00101</div>
+                                </div>
+                            </td>
+                            <td class="td-cell cell-today">
+                                <div class="booking-card card-holding">
+                                    ⏳ Giữ chỗ (30p)
+                                    <div class="order-id">RG-2026-00128</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+
+                        <!-- DÒNG XE 2: YAMAHA JANUS 2023 -->
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">Yamaha Janus 2023</div>
+                                <div class="bike-meta">72-F1 456.78 · Xe tay ga</div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell cell-today">
+                                <div class="booking-card card-pending">
+                                    Chờ duyệt
+                                    <div class="order-id">RG-2026-00140</div>
+                                </div>
+                            </td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00094</div>
+                                </div>
+                            </td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00094</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+
+                        <!-- DÒNG XE 3: HONDA WAVE ALPHA 110 -->
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">Honda Wave Alpha 110</div>
+                                <div class="bike-meta">72-G1 123.45 · Xe số</div>
+                            </td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00050</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty cell-today">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell">
+                                <div class="booking-card card-holding">
+                                    ⏳ Giữ chỗ (30p)
+                                    <div class="order-id">RG-2026-00199</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">Honda Vision 2024</div>
+                                <div class="bike-meta">72-C1 888.99 · Xe tay ga</div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00101</div>
+                                </div>
+                            </td>
+                            <td class="td-cell cell-today">
+                                <div class="booking-card card-holding">
+                                    ⏳ Giữ chỗ (30p)
+                                    <div class="order-id">RG-2026-00128</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">Honda Wave Alpha 110</div>
+                                <div class="bike-meta">72-G1 123.45 · Xe số</div>
+                            </td>
+                            <td class="td-cell">
+                                <div class="booking-card card-confirmed">
+                                    Đã đặt
+                                    <div class="order-id">RG-2026-00050</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty cell-today">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell">
+                                <div class="booking-card card-holding">
+                                    ⏳ Giữ chỗ (30p)
+                                    <div class="order-id">RG-2026-00199</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+                        <!-- DÒNG XE 4: VINFAST FELIZ S -->
+                        <tr>
+                            <td class="td-bike-info">
+                                <div class="bike-name">VinFast Feliz S (Điện)</div>
+                                <div class="bike-meta">72-M1 999.00 · Xe máy điện</div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-cell cell-today">
+                                <div class="booking-card card-holding">
+                                    ⏳ Giữ chỗ (30p)
+                                    <div class="order-id">RG-2026-00210</div>
+                                </div>
+                            </td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                            <td class="td-empty">+ Trống</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FOOTER THÔNG BÁO -->
+            <div class="table-footer">
+                <span>💡 Bấm vào ô lịch có màu để xem chi tiết thông tin khách đặt và mã đơn.</span>
+                <span class="sync-status">
+                    <span class="ping-container">
+                        <span class="ping-wave"></span>
+                        <span class="ping-dot"></span>
+                    </span>
+                    Trạng thái được cật nhập lại mới sau 30s
+                </span>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

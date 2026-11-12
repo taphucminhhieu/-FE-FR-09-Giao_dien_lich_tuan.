@@ -298,7 +298,7 @@ tbody tr {
 }
 
 .card-confirmed {
-    background-color: var(--color-confirmed);
+    background-color: rgb(29, 160, 125);
     color: #ffffff;
 }
 
